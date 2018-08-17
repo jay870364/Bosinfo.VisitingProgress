@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3FD9A696-A231-48BC-903D-63C8F5DDD3C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bosinfo.VisitingProgress.DataServices</RootNamespace>
+    <AssemblyName>Bosinfo.VisitingProgress.DataServices</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataServices.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bosinfo.VisitingProgress.ConfigServices\Bosinfo.VisitingProgress.ConfigServices.csproj">
+      <Project>{9842C0B5-E0CD-4DC5-B7AA-020312F39134}</Project>
+      <Name>Bosinfo.VisitingProgress.ConfigServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bosinfo.VisitingProgress.Enums\Bosinfo.VisitingProgress.Enums.csproj">
+      <Project>{DCF4CC46-22EA-423E-9682-B58F0808A861}</Project>
+      <Name>Bosinfo.VisitingProgress.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bosinfo.VisitingProgress.Models\Bosinfo.VisitingProgress.Models.csproj">
+      <Project>{AEF5125B-F295-46B0-BEF4-8A6885398286}</Project>
+      <Name>Bosinfo.VisitingProgress.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bosinfo.VisitingProgress.UtilityTools\Bosinfo.VisitingProgress.UtilityTools.csproj">
+      <Project>{E729BF8A-C332-4AA6-B0D0-93A97738FC54}</Project>
+      <Name>Bosinfo.VisitingProgress.UtilityTools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
